@@ -20,7 +20,7 @@ public class Main {
 
 //        wellRepository.save(well);
 
-        System.out.println(wellRepository.find(Type.liquidated,"\\d{2}"));
+        System.out.println(wellRepository.find(Type.delivery,"\\d{2}"));
 
     }
 }

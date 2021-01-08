@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface WellRepository extends MongoRepository<Well, String> {
 
-    @Query(value = "{$or: [{'type': ?type}, {'name': {$regex: ?regexp}}]}")
-    List<Well> find(@Param("type")Type type, @Param("regexp")String regexp);
+    @Query(value = "{$or: [{'type': ?0}, {'name': {$regex: ?1}}]}")
+    List<Well> find(Type type, String regexp);
 }
