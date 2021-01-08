@@ -36,11 +36,13 @@ public class Main {
 //        mongoTemplate.save(well, "well");
 //        mongoTemplate.save(field, "field");
 
+
         // find
         List<Well> wells = mongoTemplate.find(new Query(
-                where("type").is(Type.delivery)
-                    .orOperator(where("field").is("almet"),
-                            where("name").regex("\\d?"))),
+                where("type").is(Type.liquidated)
+                    .orOperator(where("field").is("roma")
+                            ,where("name").regex("\\d{2}")
+                    )),
                 Well.class, "well");
         for (Well w: wells) {
             System.out.println(w.getName());

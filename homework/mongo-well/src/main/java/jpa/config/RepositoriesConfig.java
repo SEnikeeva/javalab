@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class RepositoriesConfig {
     @Bean
     public MongoTemplate mongoTemplate() {
-        return new MongoTemplate(MongoClients.create(), "javalab");
+        return new MongoTemplate(MongoClients.create(), "well_db");
     }
 }
